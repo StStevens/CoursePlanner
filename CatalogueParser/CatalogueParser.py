@@ -40,7 +40,7 @@ class CatalogueParser:
 if __name__ == "__main__":
     parser = CatalogueParser("catalog.txt")
     parser.parse()
-    csCourses = [x for x in parser.catalogue.keys() if "CS" in x]
+    csCourses = [x for x in parser.catalogue.keys() if "CS" == x.split()[0]]
     for key in csCourses:
         course = parser.catalogue[key]
         print(course.shortName)
